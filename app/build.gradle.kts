@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    buildFeatures { viewBinding = true }
     namespace = "com.example.a3xml_tipcalcultator"
     compileSdk = 34
 
