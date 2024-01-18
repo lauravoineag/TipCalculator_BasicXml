@@ -3,6 +3,7 @@ package com.example.a3xml_tipcalcultator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.a3xml_tipcalcultator.databinding.ActivityMainBinding
+import java.text.NumberFormat
 import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +36,9 @@ class MainActivity : AppCompatActivity() {
         val roundUp = binding.roundUpTip.isChecked
         if (roundUp) { tip = ceil(tip ) }
 
-        binding.tipResult.text = tip.toString()
+        val currencyTip = NumberFormat.getCurrencyInstance().format(tip)
+
+        binding.tipResult.text = currencyTip
 
     }
 }
