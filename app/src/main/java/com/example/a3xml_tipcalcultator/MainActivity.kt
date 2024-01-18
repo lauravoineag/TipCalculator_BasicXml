@@ -34,11 +34,13 @@ class MainActivity : AppCompatActivity() {
         var tip = costOfService * tipPercentage //var because user might round up tip
 
         val roundUp = binding.roundUpTip.isChecked
-        if (roundUp) { tip = ceil(tip ) }
+        if (roundUp) {
+            tip = ceil(tip)
+        }
 
         val currencyTip = NumberFormat.getCurrencyInstance().format(tip)
 
-        binding.tipResult.text = currencyTip
+        binding.tipResult.text = getString(R.string.tip_amount, currencyTip)
 
     }
 }
