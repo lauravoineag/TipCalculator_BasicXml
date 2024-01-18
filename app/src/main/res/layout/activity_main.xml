@@ -9,7 +9,6 @@
 
     <EditText
         android:id="@+id/cost_of_service"
-        android:background="@android:color/holo_orange_light"
         android:layout_height="wrap_content"
         android:layout_width="160dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,5 +67,22 @@
         app:layout_constraintStart_toStartOf="@id/tip_options"
         app:layout_constraintTop_toBottomOf="@id/tip_options" />
     <!-- as tall as the content inside it -->
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        app:layout_constraintTop_toBottomOf="@id/round_up_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tip_result"
+        android:text="Tip Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/calculate_button"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
